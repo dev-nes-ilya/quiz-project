@@ -24,11 +24,11 @@
   cursor: not-allowed;
 }
 
-.error {
+Button.error {
   background: rgba(240, 87, 100, 1);
 }
 
-.success {
+Button.success {
   background: rgba(161, 240, 69, 1);
 }
 

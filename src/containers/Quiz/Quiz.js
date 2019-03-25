@@ -48,7 +48,7 @@ class Quiz extends Component {
 
     // console.log("AnswerId: ", answerId, "вопрос: ", question, "Длина quiz: ", this.state.quiz.length);
 
-
+    
     if (question.rigthAnswerId === answerId) {
       if (!results[question.id]) {
         results[question.id] = 'success'
@@ -84,15 +84,18 @@ class Quiz extends Component {
     return this.state.activeQuestion + 1 === this.state.quiz.length;
   }
 
-  retryHandler = () => (
+  retryHandler = () => {
     this.setState({
     results: {}, 
     isFinished: false,
     activeQuestion: 0,
     answerState: null,
     })
+  }
 
-  )
+  componentDidMount() {
+    console.log('Quiz ID = ', this.props.match.params.id)
+  }
 
   render() {
     return (
