@@ -16,8 +16,6 @@ const Input = props => {
         cls.push('invalid')
     }
     
-    console.log("valid:",props.valid, "shouldValidate:", props.shouldValidate, "touched:", props.touched)
-
     return (
         <div className={cls.join(' ')}>
             <label htmlFor={htmlFor}>{props.label}</label>
