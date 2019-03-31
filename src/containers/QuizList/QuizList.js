@@ -8,8 +8,6 @@ import { connect } from 'react-redux'
 
 class QuizList extends Component {
 
-
-
   renderQuizes() {
     return this.props.quizes.map(quiz => {
       return (
@@ -27,16 +25,18 @@ class QuizList extends Component {
 
   componentDidMount() {
     this.props.fetchQuizes()
-    
+
   }
 
   render() {
+    console.log('loading', this.props.loading)
+    console.log('quizes.length: ', this.props.quizes.length)
     return (
       <div className={"QuizList"}>
         <div>
           <h1>Список тестов</h1>
 
-            { this.props.loading && this.props.quizes.length !== 0
+            { this.props.loading && this.props.quizes.length === 0
                 ? <Loader />
                 : <ul>
                   {this.renderQuizes()}
