@@ -10,11 +10,11 @@ export function auth(email, password, isLogin) {
     };
 
     let url =
-      "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAsJy01lFomHkefcSOl1WfoLh7TI7FewjU";
+      "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=[***]";
 
     if (isLogin) {
       url =
-        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAsJy01lFomHkefcSOl1WfoLh7TI7FewjU";
+        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=[***]";
     }
 
     const response = await axios.post(url, authData);
