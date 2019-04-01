@@ -3,7 +3,6 @@ import "./ActiveQuiz.css";
 import AnswersList from "./AnswersList/AnswersList";
 
 const ActiveQuiz = props => {
-  // console.log("ActiveQuiz log ", props);
 
   return (
     <div className="ActiveQuiz">
@@ -13,7 +12,7 @@ const ActiveQuiz = props => {
           {props.question}
         </span>
 
-        <small>{props.answerNumber} из {props.quizLength}</small>
+        <small className="counter">{props.answerNumber} из {props.quizLength}</small>
       </p>
 
       <AnswersList
