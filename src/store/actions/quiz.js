@@ -41,7 +41,6 @@ export function fetchQuizById(quizId) {
       const quiz = response.data;
       
       dispatch(fetchQuizSuccess(quiz));
-      console.log('получение респонз: ', quiz)
     } catch (e) {
       dispatch(fetchQuizesError(e));
     }

@@ -7,8 +7,6 @@ const AnswerItem = props => {
   if (props.state) {
     cls.push(props.state)
   }
-  // console.log(cls)
-  console.log(props)
   return (
     <li 
       className={cls.join(' ')}
